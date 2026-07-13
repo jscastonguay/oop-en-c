@@ -12,7 +12,7 @@ static float getArea(Figure * self) {
 
 void Circle_ctor(Circle * self, float r) {
     assert(r > 0);
-    Figure_ctor((Figure *) self, "Cercle");
+    Figure_ctor(&self->_parent, "Cercle");
     self->_r = r;
     self->_parent.getArea = getArea;
 }
